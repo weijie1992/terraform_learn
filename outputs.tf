@@ -1,5 +1,5 @@
 output "public_ip" {
-  description = "The public IP address of the web server"
+  description = "DNS of the application load balancer"
   sensitive   = false
-  value       = aws_instance.weijieexample.public_ip
+  value       = aws_lb.weijieexample.dns_name
 }
